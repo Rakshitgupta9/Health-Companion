@@ -38,7 +38,7 @@ Health Companion is a comprehensive health and wellness platform that integrates
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/health-companion.git
+   git clone https://github.com/Rakshitgupta9/health-companion.git
    ```
 
 2. Install dependencies:
