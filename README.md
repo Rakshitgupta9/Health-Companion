@@ -3,7 +3,7 @@
 
 
 
-# Health Companion
+<hr>
 
 Health Companion is a comprehensive health and wellness platform that integrates disease prediction, BMI calculation, calorie tracking, and more. This project is developed using Python, Flask, HTML, CSS, and MySQL. It empowers users to monitor their health, receive personalized insights, and make informed lifestyle choices.
 
