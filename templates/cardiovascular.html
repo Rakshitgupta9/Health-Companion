@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Details </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			
+	</head>
+	<body>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Details required</h1>
+			</div></br>
+			<h2 class="word">
+				<form action="{{ url_for('cardiovascular') }}" method="post">
+					<div class="msg">{{ msg }}</div>
+                    <label for="age1">Age:</label>
+					<input id="age1" name="age1" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="gender1">Gender:</label>
+					<select name="gender1" id="gender1" class="textbox" type="text">
+						<option disabled selected value> -- select an option -- </option>
+						<option value="1">male</option>
+						<option value="2">female</option>
+					</select><br><br>
+                    <label for="height">Height(cm):</label>
+					<input id="height" name="height" type="text" placeholder="enter value" class="textbox"/></br></br>
+                    <label for="weight">Weight(kg):</label>
+					<input id="weight" name="weight" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="ap_hi">Systolic blood pressure:</label>
+					<input id="ap_hi" name="ap_hi" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="ap_lo">Diastolic blood pressure:</label>
+					<input id="ap_lo" name="ap_lo" type="text" placeholder="enter value" class="textbox"/></br></br>
+                    <label for="cholesterol">Cholesterol level:</label>
+					<select name="cholesterol" id="cholesterol" class="textbox" type="text" >
+						<option disabled selected value> -- select an option -- </option>
+						<option value="1">normal</option>
+						<option value="2">above normal</option>
+                        <option value="3">well above normal</option>
+					</select><br><br><br>
+                    <label for="glu">Glucose level:</label>
+                    <select name="glu" id="glu" class="textbox" type="text" >
+						<option disabled selected value> -- select an option -- </option>
+						<option value="1">normal</option>
+						<option value="2">above normal</option>
+                        <option value="3">well above normal</option>
+					</select><br><br><br>
+                    <label for="smoke">Smoking?:</label>
+					<select name="smoke" id="smoke" class="textbox" type="text" >
+						<option disabled selected value> -- select an option -- </option>
+						<option value="1">yes</option>
+						<option value="0">no</option>
+					</select><br><br><br>
+                    <label for="alco">Alcohol?:</label>
+					<select name="alco" id="alco" class="textbox" type="text" >
+						<option disabled selected value> -- select an option -- </option>
+						<option value="1">yes</option>
+						<option value="0">no</option>
+					</select><br><br><br>
+                    <label for="active">Physical activity:</label>
+					<select name="active" id="active" class="textbox" type="text" >
+						<option disabled selected value> -- select an option -- </option>
+						<option value="1">yes</option>
+						<option value="0">no</option>
+					</select><br><br><br>
+					<input type="submit" class="btn" value="SUBMIT" href="{{url_for('output')}}"></br>
+				</form>
+			</h2>
+			<p class="bottom"><a class="bottom" href="{{url_for('index')}}">Back</a></p>
+		</div>
+		</div>
+	</body>
+</html>
