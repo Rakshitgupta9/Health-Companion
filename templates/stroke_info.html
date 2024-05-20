@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stroke</title>
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #content {
+      background-color: rgba(255, 255, 255, 0.7); 
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow-y: auto; 
+      max-height: 80vh; 
+    }
+
+    h1 {
+      color: #1c86d6;
+      text-align: center;
+    }
+    
+    strong {
+      color: #dc3545;
+    }
+    
+    p {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content">
+  <h1>What is a Stroke?</h1>
+  <p>Stroke is caused by blockage of blood flow to the brain, usually due to a blood clot that is lodged within one of the blood vessels to the brain.</p>
+
+  <h2>Types of Stroke</h2>
+  <ul>
+    <li><strong>Ischemic Stroke:</strong> occurs when a blood vessel supplying blood to the brain is obstructed.</li>
+    <li><strong>Transient Ischemic Attack (TIA):</strong> is a short-term clot or blockage in the brain.</li>
+    <li><strong>Hemorrhagic Stroke:</strong> occurs when a weakened vessel ruptures and bleeds into the brain.</li>
+  </ul>
+
+  <h2>Risk Factors of Stroke</h2>
+  <h3>Medical Conditions</h3>
+  <ul>
+    <li>High Blood Pressure</li>
+    <li>High Blood Cholesterol</li>
+    <li>Heart Disease</li>
+    <li>Diabetes</li>
+    <li>Overweight and Obesity</li>
+    <li>Sickle Cell Disease</li>
+    <li>Previous Stroke or Transient Ischemic Attack (TIA)</li>
+  </ul>
+
+  <h3>Behaviors</h3>
+  <ul>
+    <li>Tobacco Use</li>
+    <li>Alcohol Use</li>
+    <li>Lack of Physical Activity</li>
+  </ul>
+
+  <h3>Risk Factors Not Within Your Control</h3>
+  <ul>
+    <li>Age</li>
+    <li>Family History</li>
+    <li>Race</li>
+    <li>Gender</li>
+  </ul>
+
+  <a href="https://en.wikipedia.org/wiki/Stroke" style="text-decoration: none; color: #b42424; display: block; text-align: center; margin-top: 20px;">More Details</a>
+  <a href="{{ url_for('index') }}" style="text-decoration: none; color: #10e5d3; display: block; text-align: center; margin-top: 20px;">Back</a>
+  <a href="{{ url_for('logout') }}" style="text-decoration: none; color: #333; display: block; text-align: center; margin-top: 20px;">Logout</a>
+  
+</div>
+
+</body>
+</html>

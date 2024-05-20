@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Details </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			
+	</head>
+	<body>
+		<div align="center">
+			<div align="center" class="border">
+				<div class="header">
+					<h1 class="word">Details required</h1>
+				</div></br>
+				<h2 class="word">
+					<form action="{{ url_for('stroke') }}" method="post">
+						<div class="msg">{{ msg }}</div>
+						<label for="gender">Gender:</label>
+						<select name="gender" id="gender" class="textbox" type="text">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="0">male</option>
+							<option value="1">female</option>
+						</select><br><br><br>
+						<label for="age">Age:</label>
+						<input id="age" name="age" type="text" placeholder="enter value" class="textbox"/></br></br>
+						<label for="hypertension">Experienced hypertension?:</label>
+						<select name="hypertension" id="hypertension" class="textbox" type="text">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="0">yes</option>
+							<option value="1">no</option>
+						</select><br><br><br>
+						<label for="heart_disease">Any prior heart disease?:</label>
+						<select name="heart_disease" id="heart_disease" class="textbox" type="text">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="0">yes</option>
+							<option value="1">no</option>
+						</select><br><br><br>
+						<label for="ever_married">Ever married?</label>
+						<select name="ever_married" id="ever_married" class="textbox" type="text">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="1">yes</option>
+							<option value="0">no</option>
+						</select><br><br><br>
+						<label for="work_type">Work type:</label>
+						<select name="work_type" id="work_type" class="textbox" type="text">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="2">children</option>
+							<option value="3">government job</option>
+							<option value="4">never worked</option>
+							<option value="0">private</option>
+							<option value="1">self employment</option>
+						</select><br><br><br>
+						<label for="residence_type">Residence type:</label>
+						<select name="residence_type" id="residence_type" class="textbox" type="text" >
+							<option disabled selected value> -- select an option -- </option>
+							<option value="1">rural</option>
+							<option value="0">urban</option>
+						</select><br><br><br>
+						<label for="avg_glucose_level">Average glucose level:</label>
+						<input id="avg_glucose_level" name="avg_glucose_level" type="text" placeholder="enter value" class="textbox"/></br></br>
+						<label for="bmi">Enter BMI:</label>
+						<input id="bmi" name="bmi" type="text" placeholder="enter value" class="textbox"/></br></br>
+						<label for="smoking_status">Smoking status:</label>
+						<select name="smoking_status" id="smoking_status" class="textbox" type="text">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="0">formaly smoked</option>
+							<option value="1">never smoked</option>
+							<option value="2">smokes</option>
+							<option value="3">unknown</option>
+						</select><br><br><br>
+						<input type="submit" class="btn" value="SUBMIT" href="{{url_for('output')}}"></br>
+					</form>
+				</h2>
+				<p class="bottom"><a class="bottom" href="{{url_for('index')}}">Back</a></p>
+			</div>
+		</div>
+	</body>
+</html>

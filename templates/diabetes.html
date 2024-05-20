@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Details </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			
+	</head>
+	<body>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Details required</h1>
+			</div><br><br>
+			<h2 class="word">
+				<form action="{{ url_for('diabetes') }}" method="post">
+					<div class="msg">{{ msg }}</div>
+					<label for="pregnancies">Number of pregnancies:</label>
+					<input id="pregnancies" name="pregnancies" type="text" placeholder="enter value" class="textbox"/><br><br>
+					<label for="glucose">Glucose level:</label>
+					<input id="glucose" name="glucose" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="bloodpressure">Blood Pressure:</label>
+					<input id="bloodpressure" name="bloodpressure" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="skinthickness">Skin Thickness:</label>
+					<input id="skinthickness" name="skinthickness" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="insulin">Insulin:</label>
+					<input id="insulin" name="insulin" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="bmi_dia">Enter BMI:</label>
+					<input id="bmi_dia" name="bmi_dia" type="text" placeholder="enter value" class="textbox"/></br></br>
+                    <label for="diabetes_pedigree_fnc">Diabetes pedigree function*:</label>
+					<input id="diabetes_pedigree_fnc" name="diabetes_pedigree_fnc" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<label for="age_dia">Enter age:</label>
+					<input id="age_dia" name="age_dia" type="text" placeholder="enter value" class="textbox"/></br></br>
+					<input type="submit" class="btn" value="SUBMIT" href="{{url_for('output')}}"></br>
+				</form>
+			</h2>
+			<p>*if unsure, enter 1 if there is family history of diabetes else enter 0</p>
+            <p class="bottom"><a class="bottom" href="{{url_for('index')}}"> Back</a></p>
+		</div>
+		</div>
+	</body>
+</html>

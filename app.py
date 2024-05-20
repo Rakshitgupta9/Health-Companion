@@ -192,10 +192,8 @@ def diaml(pregnancies,glucose,bloodpressure,skinthickness,insulin,bmi_dia,diabet
 	model.fit(X_train, Y_train)
 
 	input_data = (float(pregnancies), float(glucose), float(bloodpressure), float(skinthickness), float(insulin), float(bmi_dia), float(diabetes_pedigree_fnc), float(age_dia))	
-	# change the input data to a numpy array
 	input_data_as_numpy_array= np.asarray(input_data)
 
-	# reshape the numpy array as we are predicting for only on instance
 	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
 	prediction = model.predict(input_data_reshaped)
@@ -242,10 +240,8 @@ def cardiovascularml(age1,gender1,height,weight,ap_hi,ap_lo,cholesterol,glu,smok
 	S= heart_data[heart_data.CARDIO_DISEASE == 0]
 	NS= heart_data[heart_data.CARDIO_DISEASE == 1]
 
- 	#concatenating the two datasets 
 	nds=pd.concat([S,NS],axis=0)
 
- 	#nds is our new dataset 
 	nds['CARDIO_DISEASE'].value_counts()
 
 	X=nds.drop(columns='CARDIO_DISEASE',axis=1)
@@ -359,8 +355,22 @@ def logout():
 	session.pop('username', None)
 	return redirect(url_for('login'))
 
+@app.route('/details')
+def details():
+    return render_template('details.html')
 
 
+@app.route('/stroke_info')
+def stroke_info():
+    return render_template('stroke_info.html')
+
+@app.route('/diabetes_info')
+def diabetes_info():
+    return render_template('diabetes_info.html')
+
+@app.route('/cardiovascular_info')
+def cardiovascular_info():
+    return render_template('cardiovascular_info.html')
 
 @app.route('/index')
 def index():
@@ -401,3 +411,4 @@ def register():
 
 if __name__ == '__main__':
     app.run(debug=True)
+

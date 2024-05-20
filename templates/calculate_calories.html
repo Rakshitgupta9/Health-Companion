@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div align="center">
+        <div align="center" class="border">
+            <div class="header">
+                <h1 class="word">Calorie Calculator</h1>
+            </div></br>
+            <h2 class="word">
+                <form action="{{ url_for('calculate_calories') }}" method="post">
+                    <div class="msg">{{ msg }}</div>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender" class="textbox" type="text" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select></br></br>
+                    <label for="weight">Weight (kg):</label>
+                    <input id="weight" name="weight" type="text" placeholder="enter value" class="textbox" required/></br></br>
+                    <label for="height">Height (cm):</label>
+                    <input id="height" name="height" type="text" placeholder="enter value" class="textbox" required/></br></br>
+                    <label for="age">Age:</label>
+                    <input id="age" name="age" type="text" placeholder="enter value" class="textbox" required/></br></br>
+                    <label for="activity_level">Activity Level:</label>
+                    <select name="activity_level" id="activity_level" class="textbox" type="text" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="sedentary">Sedentary: little or no exercise</option>
+                        <option value="exercise_1_3">Exercise 1-3 times/week</option>
+                        <option value="exercise_4_5">Exercise 4-5 times/week</option>
+                        <option value="daily_exercise">Daily exercise or intense exercise 3-4 times/week</option>
+                        <option value="intense_exercise">Intense exercise 6-7 times/week</option>
+                        <option value="very_intense_exercise">Very intense exercise daily, or physical job</option>
+                    </select></br></br>
+                    <input type="submit" class="btn" value="Calculate BMR">
+                </form>
+            </h2>
+            <p class="bottom"><a class="bottom" href="{{url_for('index')}}">Back</a></p>
+        </div>
+    </div>
+</body>
+</html>

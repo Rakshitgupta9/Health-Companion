@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardiovascular Disease</title>
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #content {
+      background-color: rgba(255, 255, 255, 0.7); 
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow-y: auto; 
+      max-height: 80vh; 
+    }
+
+    h1 {
+      color: #1c86d6;
+      text-align: center;
+    }
+    
+    strong {
+      color: #dc3545;
+    }
+    
+    p {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+<div id="content">
+  <h1>Cardiovascular Disease</h1>
+  <p>Cardiovascular disease (CVD) is a general term for conditions affecting the heart or blood vessels.</p>
+  <p>It's usually associated with a build-up of fatty deposits inside the arteries (atherosclerosis) and an increased risk of blood clots.</p>
+  <p>It can also be associated with damage to arteries in organs such as the brain, heart, kidneys, and eyes.</p>
+  <p>CVD is one of the main causes of death and disability in the UK, but it can often largely be prevented by leading a healthy lifestyle.</p>
+
+  <h2>Types of CVD</h2>
+  <h3>Coronary Heart Disease</h3>
+  <p>Coronary heart disease occurs when the flow of oxygen-rich blood to the heart muscle is blocked or reduced.</p>
+  <p>This puts an increased strain on the heart, and can lead to:</p>
+  <ul>
+    <li>Angina – chest pain caused by restricted blood flow to the heart muscle</li>
+    <li>Heart attacks – where the blood flow to the heart muscle is suddenly blocked</li>
+    <li>Heart failure – where the heart is unable to pump blood around the body properly</li>
+  </ul>
+
+  <h3>Strokes and TIAs</h3>
+  <p>A stroke is where the blood supply to part of the brain is cut off, which can cause brain damage and possibly death.</p>
+  <p>A transient ischaemic attack (also called a TIA or "mini-stroke") is similar, but the blood flow to the brain is only temporarily disrupted.</p>
+  <p>The main symptoms of a stroke or TIA can be remembered with the word FAST, which stands for:</p>
+  <ul>
+    <li>Face – the face may have drooped on one side, the person may be unable to smile, or their mouth or eye may have dropped.</li>
+    <li>Arms – the person may not be able to lift both arms and keep them there because of arm weakness or numbness in one arm.</li>
+    <li>Speech – their speech may be slurred or garbled, they may not be able to talk at all or they may not be able to understand what you are saying to them.</li>
+    <li>Time – it's time to dial 999 immediately if you see any of these signs or symptoms.</li>
+  </ul>
+
+  <h3>Peripheral Arterial Disease</h3>
+  <p>Peripheral arterial disease occurs when there's a blockage in the arteries to the limbs, usually the legs.</p>
+  <p>This can cause:</p>
+  <ul>
+    <li>dull or cramping leg pain, which is worse when walking and gets better with rest</li>
+    <li>hair loss on the legs and feet</li>
+    <li>numbness or weakness in the legs</li>
+    <li>persistent ulcers (open sores) on the feet and legs</li>
+  </ul>
+
+  <h3>Aortic Disease</h3>
+  <p>Aortic diseases are a group of conditions affecting the aorta. This is the largest blood vessel in the body, which carries blood from the heart to the rest of the body.</p>
+  <p>One of most common aortic diseases is an aortic aneurysm, where the aorta becomes weakened and bulges outwards.</p>
+  <p>This doesn't usually have any symptoms, but there's a chance it could burst and cause life-threatening bleeding.</p>
+
+  <h2>Causes of CVD</h2>
+  <p>The exact cause of CVD isn't clear, but there are lots of things that can increase your risk of getting it. These are called "risk factors".</p>
+  <p>The more risk factors you have, the greater your chances of developing CVD.</p>
+  <p>If you're over 40, you'll be invited by your GP for an NHS Health Check every 5 years.</p>
+  <p>Part of this check involves assessing your individual CVD risk and advising you how to reduce it if necessary.</p>
+
+  <h3>High blood pressure</h3>
+  <p>High blood pressure (hypertension) is one of the most important risk factors for CVD. If your blood pressure is too high, it can damage your blood vessels.</p>
+  <p>Read more about high blood pressure.</p>
+
+  <h3>Smoking</h3>
+  <p>Smoking and other tobacco use is also a significant risk factor for CVD. The harmful substances in tobacco can damage and narrow your blood vessels.</p>
+
+  <h3>High cholesterol</h3>
+  <p>Cholesterol is a fatty substance found in the blood. If you have high cholesterol, it can cause your blood vessels to narrow and increase your risk of developing a blood clot.</p>
+  <p>Read more about high cholesterol.</p>
+
+  <h3>Diabetes</h3>
+  <p>Diabetes is a lifelong condition that causes your blood sugar level to become too high.</p>
+  <p>High blood sugar levels can damage the blood vessels, making them more likely to become narrowed.</p>
+  <p>Many people with type 2 diabetes are also overweight or obese, which is also a risk factor for CVD.</p>
+
+  <h3>Inactivity</h3>
+  <p>If you don't exercise regularly, it's more likely that you'll have high blood pressure, high cholesterol levels and be overweight. All of these are risk factors for CVD.</p>
+  <p>Exercising regularly will help keep your heart healthy. When combined with a healthy diet, exercise can also help you maintain a healthy weight.</p>
+
+  <h3>Being overweight or obese</h3>
+  <p>Being overweight or obese increases your risk of developing diabetes and high blood pressure, both of which are risk factors for CVD.</p>
+  <p>You're at an increased risk of CVD if:</p>
+  <ul>
+    <li>your body mass index (BMI) is 25 or above – use the BMI healthy weight calculator to work out your BMI</li>
+    <li>you're a man with a waist measurement of 94cm (about 37 inches) or more, or a woman with a waist measurement of 80cm (about 31.5 inches) or more</li>
+  </ul>
+  <p>Read more about obesity.</p>
+
+  <h3>Family history of CVD</h3>
+  <p>If you have a family history of CVD, your risk of developing it is also increased.</p>
+  <p>You're considered to have a family history of CVD if either:</p>
+  <ul>
+    <li>your father or brother were diagnosed with CVD before they were 55</li>
+    <li>your mother or sister were diagnosed with CVD before they were 65</li>
+  </ul>
+  <p>Tell your doctor or nurse if you have a family history of CVD. They may suggest checking your blood pressure and cholesterol level.</p>
+
+  <h3>Ethnic background</h3>
+  <p>In the UK people of south Asian and Black African or African Caribbean background have an increased risk of getting CVD.</p>
+  <p>This is because people from these backgrounds are more likely to have other risk factors for CVD, such as high blood pressure or type 2 diabetes.</p>
+
+  <h3>Other risk factors</h3>
+  <p>Other factors that affect your risk of developing CVD include:</p>
+  <ul>
+    <li>age – CVD is most common in people over 50 and your risk of developing it increases as you get older</li>
+    <li>gender – men are more likely to develop CVD at an earlier age than women</li>
+    <li>diet – an unhealthy diet can lead to high cholesterol and high blood pressure</li>
+    <li>alcohol – excessive alcohol consumption can also increase your cholesterol and blood pressure levels, and contribute to weight gain</li>
+  </ul>
+
+  <a href="https://en.wikipedia.org/wiki/Stroke" style="text-decoration: none; color: #b42424; display: block; text-align: center; margin-top: 20px;">More Details</a>
+  <a href="{{ url_for('index') }}" style="text-decoration: none; color: #10e5d3; display: block; text-align: center; margin-top: 20px;">Back</a>
+  <a href="{{ url_for('logout') }}" style="text-decoration: none; color: #333; display: block; text-align: center; margin-top: 20px;">Logout</a>
+    
+</div>
+
+</body>
+</html>

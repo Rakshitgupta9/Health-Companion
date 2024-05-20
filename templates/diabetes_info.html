@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes</title>
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      display: flex;
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      height: 100vh;
+      overflow: hidden; /* Prevents content from overflowing outside the viewport */
+    }
+
+    #content-wrapper {
+      max-height: 80vh; /* Limiting the maximum height to avoid excessive scrolling */
+      overflow-y: auto; /* Enables vertical scrolling if needed */
+      width: 100%; /* Ensures full width */
+    }
+
+    #content {
+      background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value for opacity */
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin: 0 auto; /* Center the content horizontally */
+    }
+
+    h1 {
+      color: #1c86d6;
+      text-align: center;
+    }
+    
+    strong {
+      color: #dc3545;
+    }
+    
+    p {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content-wrapper">
+  <div id="content">
+    <h1>What is Diabetes?</h1>
+    <p>Diabetes is a serious, common, and costly disease, and is currently the 7th leading cause of death nationwide and in Hawaii. It is characterized by high levels of blood glucose, or blood sugar. Symptoms include frequent urination, frequent thirst and hunger, fatigue, blurry vision, injuries that are slow to heal, and tingling, pain, or numbness in the hands and/or feet. People with diabetes are at greater risk of developing health complications such as cardiovascular disease, eye disease, and kidney disease. Proper management is critical to preventing complications.</p>
+
+    <h2>There are three main types of diabetes:</h2>
+
+    <h3>Type 1 Diabetes</h3>
+    <p>Type 1 diabetes, formerly called insulin-dependent or juvenile-onset diabetes, results from the failure of the insulin-producing cells of the pancreas to produce insulin. It occurs most frequently in children and young adults. Its onset is sudden and diagnosis is rapid after the start of symptoms. Only about 5% to 10% of people with diabetes have type 1. There are no known risk factors for type 1 diabetes, however one can have a genetic marker for the disease.</p>
+
+    <h3>Type 2 Diabetes</h3>
+    <p>Type 2 diabetes, also known as non-insulin-dependent or adult-onset diabetes, is the most prevalent form of the disease, occurring in about 90% to 95% of people with diabetes. In this form of diabetes, the body either does not produce enough insulin or it cannot use it properly. A person with type 2 diabetes can experience symptoms very gradually and often go unnoticed. Between 2012 and 2022, the prevalence of self-reported type 2 diabetes in Hawaii increased by 50%. Risk factors for type 2 diabetes include being overweight, having low levels of physical activity, and poor diet.</p>
+
+    <h3>Prediabetes</h3>
+    <p>Prediabetes means that one has an increased risk of developing type 2 diabetes. People with prediabetes have blood sugar levels which are higher than normal but not high enough to be type 2 diabetes. In Hawaii, 513,000 adults have prediabetes, and two in three of these adults don’t know that they have it. Without intervention, 15% to 30% of those with prediabetes will develop type 2 diabetes within five years.</p>
+
+    <a href="https://en.wikipedia.org/wiki/Stroke" style="text-decoration: none; color: #b42424; display: block; text-align: center; margin-top: 20px;">More Details</a>
+    <a href="{{ url_for('index') }}" style="text-decoration: none; color: #10e5d3; display: block; text-align: center; margin-top: 20px;">Back</a>
+    <a href="{{ url_for('logout') }}" style="text-decoration: none; color: #333; display: block; text-align: center; margin-top: 20px;">Logout</a>
+    
+  </div>
+</div>
+
+</body>
+</html>

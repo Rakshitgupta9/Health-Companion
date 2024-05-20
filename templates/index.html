@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Index</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">					
+	</head>
+	<body></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">MENU</h1>
+			</div>
+				<p class="bottom">
+					Hello {{session.username}}<br>What would you like to check out?				
+                </p></br>
+                <div class="btn-group">
+                    <button><a href="{{ url_for('stroke') }}">STROKE RISK</a></button><br>
+                    <button><a href="{{url_for('cardiovascular')}}">GENERAL CARDIOVASCULAR DISEASE</a></button><br>
+                    <button><a href="{{url_for('diabetes')}}">DIABETES RISK</a></button><br>
+                    <button><a href="{{ url_for('calculate_bmi') }}">BMI CALCULATOR</a></button><br>
+                    <button><a href="{{url_for('calculate_calories')}}">CALORIES CALCULATOR</a></button><br>
+                    <button><a href="{{url_for('details')}}">DETAILS ABOUT DISEASE</a></button>
+
+                </div><br><br><br><br>
+				<a href="{{ url_for('logout') }}" class="btn">Logout</a>
+		</div>
+		</div>
+	</body>
+</html>

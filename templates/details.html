@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">                  
+</head>
+<body>
+    <div align="center">
+        <div align="center" class="border">
+            <div class="header">
+                <h1 class="word">DISEASE DETAILS</h1>
+            </div>
+            <p class="bottom">
+                Hello {{session.username}}<br>Here are details about top diseases:            
+            </p><br>
+            <div class="btn-group">
+                <button><a href="{{ url_for('stroke_info') }}">STROKE</a></button><br>
+                <button><a href="{{url_for('diabetes_info')}}">DIABETES</a></button><br>
+                <button><a href="{{url_for('cardiovascular_info')}}">CARDIOVASCULAR DISEASE</a></button><br>
+            </div><br><br><br><br>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
