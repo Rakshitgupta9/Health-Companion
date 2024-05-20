@@ -168,7 +168,7 @@ Health Companion is a web application designed to help users monitor and predict
 
 ## Contributing
 
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) for more details.
+Contributions are welcome! 
 
 ## License
 
